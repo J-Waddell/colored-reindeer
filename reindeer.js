@@ -2,11 +2,13 @@ var colors = ["Blue", "Red", "Orange", "Purple", "Hazel", "Aquamarine", "Periwin
 var reindeer = ["Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"];
 
 
-var hohohoElement = document.getElementById("coloredReindeer");
+var listReindeer = "";
 
+for (var i = 0; i < reindeer.length; i++) {
+	var newReindeer = colors[i] + " " + reindeer[i];
+	console.log(newReindeer);
+	listReindeer += "<li>"+newReindeer+"</li>";
 
-for (var i = 0; i < colors.length, reindeer.length i++) {
-	console.log("coloredReindeer"[i])
 }
-
-document.getElementById("coloredReindeer").innerHTML = hohohoElement;
+var hohohoElement = document.getElementById("coloredReindeer");
+hohohoElement.innerHTML = listReindeer;
